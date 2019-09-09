@@ -15,3 +15,5 @@ const getWeather = function() {
       console.log(err);
   })
 }
+
+console.log("hello world");
