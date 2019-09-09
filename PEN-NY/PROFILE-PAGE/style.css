@@ -16,10 +16,9 @@ header {
   width: 100%;
   padding: 50px;
   color: #c15827;
-  background-color: white;
   /* border-bottom: 2px #393985 solid; */
   /* background-image: url(images/pen-ny-banner.png); */
-  background-size: 10%;
+  background-size: 20%;
   background-repeat: no-repeat;
   background-position: left;
   height: 100%;
@@ -172,5 +171,4 @@ p {
   margin-bottom: 10px;
   font-size: 25px;
   color: #ED5555;
-
 }

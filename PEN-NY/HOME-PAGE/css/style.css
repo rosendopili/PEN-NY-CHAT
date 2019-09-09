@@ -1,51 +1,99 @@
-header {
-  background-color: white;
-  color: #C15827;
-}
-
 body {
-  background-color: #03FCC6;
+  margin: 0 auto;
+  font-family: verdana, sans-serif;
+  background-color: #97c2ae;
 }
 
 header {
-   background-color: #1224B0;
+  width: 100%;
+  padding: 50px;
+  color: #c15827;
+  /* border-bottom: 2px #393985 solid; */
+  /* background-image: url(images/pen-ny-banner.png); */
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-position: left;
+  height: 100%;
+  margin: 0 auto;
 }
 
 nav {
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: center;
+  font-family: arial, sans-serif;
+  width: 100%;
+  /* nav is off center */
 }
 
-nav a {
-  display: inline-block;
-  padding: 10px;
+a {
   text-decoration: none;
-  font-size: 20px;
-  color: #C15827;
-  text-align: center;
+  padding: 20px;
+  margin: 0 100px 0 100px;
+  font-size: 30px;
+  letter-spacing: 5px;
+  line-height: 40px;
+  color: #c15827;
 }
-.content-wrapper, .content-wrapper1, .content-wrapper2 {
+
+.content-wrapper {
   margin: 10px auto;
   display: grid;
-  height: 200px;
-  width: 550px;
+  height: 20%;
+  width: 80%;
   overflow-y: scroll;
   padding-bottom: 10px;
   border: 3px solid #9EA3A0;
+  background-color: white;
+  border: none;
+  box-shadow: 0px 15px 20px #393985;
+  margin-bottom: 30px;
+  font-size: 20px;
 }
 
-// I was trying to move the submit buttons underneath the comment boxes
-//either towards the left or the right of the boxes
-.submit {
-  /*display: flex;
-  justify-content: center;
-  align-items: center;*/
-}
-
-footer p {
+footer {
+  width: 100%;
   text-align: center;
+  /* border-top: 5px #393985 solid; */
+  padding-top: 15px;
+  padding-bottom: 20px;
+  color: #c15827;
+  font-size: 25px;
 }
-/*#profileinfo {
-  width: 100px;
-  height: 400px;
-}*/
+
+#contentWall {
+  margin: 10px auto;
+  display: grid;
+  height: 700px;
+  width: 80%;
+  overflow-y: scroll;
+  border: 3px solid #9EA3A0;
+  background-color: white;
+  border: none;
+  box-shadow: 0px 20px 30px #393985;
+  margin-bottom: 100px;
+}
+
+#usrform {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.submit {
+  width: 50%;
+  height: 60px;
+  /* border: 2px #393985 solid; */
+  border: none;
+  align-self: center;
+  background-color: #F58994;
+  font-size: 30px;
+  letter-spacing: 5px;
+  line-height: 40px;
+  margin-top: 0px;
+  margin-bottom: 50px;
+  color: white;
+  box-shadow: 0px 10px 15px #393985;
+}
