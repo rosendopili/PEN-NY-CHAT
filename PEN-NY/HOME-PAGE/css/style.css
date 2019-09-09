@@ -1,0 +1,51 @@
+header {
+  background-color: white;
+  color: #C15827;
+}
+
+body {
+  background-color: #03FCC6;
+}
+
+header {
+   background-color: #1224B0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #C15827;
+  text-align: center;
+}
+.content-wrapper, .content-wrapper1, .content-wrapper2 {
+  margin: 10px auto;
+  display: grid;
+  height: 200px;
+  width: 550px;
+  overflow-y: scroll;
+  padding-bottom: 10px;
+  border: 3px solid #9EA3A0;
+}
+
+// I was trying to move the submit buttons underneath the comment boxes
+//either towards the left or the right of the boxes
+.submit {
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+}
+
+footer p {
+  text-align: center;
+}
+/*#profileinfo {
+  width: 100px;
+  height: 400px;
+}*/
