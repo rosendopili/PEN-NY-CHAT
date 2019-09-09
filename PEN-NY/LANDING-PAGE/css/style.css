@@ -16,22 +16,25 @@ img {
 
 .submit {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin-top: 10px;
 }
 
 #email {
-  padding: 20px;
+  width: 20%;
+  height: 20px;
+  padding: 10px;
   margin: 20px;
+  align-self: center;
+  text-align: center;
 
 }
 
-#signUp {
+#signUp, #logIn {
+  width: 20%;
+  height: 20px;
   padding: 20px;
   margin: 20px;
-}
-
-#logIn {
-  padding: 20px;
-  margin: 20px;
+  align-self: center;
 }
