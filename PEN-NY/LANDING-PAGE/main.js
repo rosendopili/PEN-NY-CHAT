@@ -9,3 +9,11 @@ function navigateToProfilePage () {
 // if (emailInputField.value.length === 0) {
 //   document.getElementById
 // }
+
+// content window animate
+const window = document.getElementById('idWindow');
+window.onclick = function(event) {
+    if (event.target == window) {
+        window.style.display = "none";
+    }
+}

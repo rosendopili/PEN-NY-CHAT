@@ -17,11 +17,61 @@
   <div class="logo-container">
     <img class="logo" src="images/PEN-NY-LOGO.png" alt="logo">
   </div>
-    <form class="submit" action="index.html" method="post">
-      <input type="text" value="ENTER EMAIL ADDRESS" id="email"><br>
-      <input type="submit" value="SIGN UP" id="signUp"><br>
-      <input type="submit" value="LOG IN" id="logIn"><br>
-    </form>
-  <script src='main.js'></script>
+
+        <div id=buttonContainer>
+          <button
+            type="submit"
+            value="SIGN UP"
+            id="signUp">
+            SIGN UP</button>
+
+          <button
+            onclick="document.getElementById('idWindow').style.display='block';"
+            id="logIn">
+            LOG IN</button>
+
+        </div>
+
+          <div id="idWindow" class="window">
+
+            <form class="window-content animate" action="main.jss">
+
+            <div class="popUp">
+
+                <span           onclick="document.getElementById('idWindow').style.display='none'"
+                class ="close"
+                title="close window">
+                &times;</span>
+
+            <div class="container">
+
+                    <label for="username"><b>USERNAME</b></label>
+                    <input
+                      type="text"
+                      value="ENTER USERNAME"
+                      name="uname" required>
+
+                    <label for ="pw"><b>PASSWORD</b></label>
+
+                    <input
+                    type="password"
+                    value="Enter Password"
+                    name="pw" required>
+
+                    <button type="submit">ENTER</button>
+
+              </div>
+
+              <div class="container">
+
+                    <button type="button" onclick="document.getElementById('idWindow').style.display='none'"
+                    class="cancel">
+                    CANCEL</button>
+
+            </form>
+
+        </div>
+
+    <script src='main.js'></script>
   </body>
 </html>
