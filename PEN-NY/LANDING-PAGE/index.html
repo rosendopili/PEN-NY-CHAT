@@ -20,6 +20,7 @@
 
         <div id=buttonContainer>
           <button
+            onclick="navigateToProfilePage()"
             type="submit"
             value="SIGN UP"
             id="signUp">
@@ -38,7 +39,7 @@
 
             <div class="popUp">
 
-                <span           onclick="document.getElementById('idWindow').style.display='none'"
+                <span onclick="document.getElementById('idWindow').style.display='none'"
                 class ="close"
                 title="close window">
                 &times;</span>
@@ -71,7 +72,11 @@
             </form>
 
         </div>
-
+        <script>
+          function navigateToProfilePage() {
+            location.replace("../PROFILE-PAGE/index.html")
+          }
+        </script>
     <script src='main.js'></script>
   </body>
 </html>
