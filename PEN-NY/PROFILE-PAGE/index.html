@@ -20,41 +20,56 @@
           <p> Create an account by completing the fields below. </p>
 
           <form
-            onSubmit="creatUser(event)"
-            id="formContainer">
+            onSubmit="postData(event)"
+            class="signupForm">
 
-            <label id="userNameLabel">USERNAME</label>
-
-              <input
-              type= "text"
-              id="userName"
-              placeholder="ENTER USERNAME"
-              />
-
-            <label id="emailLabel">EMAIL</label>
+             <label id="emailLabel">EMAIL</label>
 
               <input
               type="text"
-              id="email"
-              placeholder="ENTER EMAIL ADDRESS"
+              class="email"
+              placeholder="ENTER EMAIL"
               />
 
             <label id="passWordLabel">PASSWORD</label>
 
               <input
               type="password"
-              id="password"
+              class="password"
               placeholder="ENTER PASSWORD"
               />
 
-            <button onclick="homePageReplace()">SUBMIT</button>
+            <label id="userNameLabel">USERNAME</label>
 
-            <script>
-            function homePageReplace() {
-              location.replace("../HOME-PAGE/index.html")
-            }
-          </script>
+              <input
+              type="text"
+              class="username"
+              placeholder="ENTER USERNAME"
+              />
+
+            <button>SUBMIT</button>
+
         </form>
+
+        <form
+            onSubmit = "createPost(event)"
+            class="postForm">
+            <input
+                type="text"
+                class="title"
+                placeholder="title"
+            />
+            <input
+                type="text"
+                class="description"
+                placeholder="description"
+            />
+            <input type="submit"/>
+        </form>
+
+        <ul class="posts">
+        </ul>
+
         <footer>
           "PEN-NY for your thoughts" &copy; 2019
         </footer>
