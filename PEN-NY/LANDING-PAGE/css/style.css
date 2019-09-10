@@ -3,7 +3,7 @@ body {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  background-color: #97c2ae;
+  background-image: radial-gradient(#45FFA8, #62F5B0, #8CDBB6,  #97C2AE);
 }
 
 img {

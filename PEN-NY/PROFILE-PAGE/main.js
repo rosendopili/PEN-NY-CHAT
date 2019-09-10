@@ -80,6 +80,7 @@ function updateDom() {
             title.innerText = res[i].title;
             description.innerText = res[i].description;
             list.appendChild(item);
+
             // if (i > res.length) {
             //   title.innerText.shift();
             //   description.innerText.shift();
