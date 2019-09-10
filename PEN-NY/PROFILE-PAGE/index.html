@@ -7,9 +7,9 @@
   <body>
     <header>
       <nav>
-        <a href="HOME-PAGE/index.html">HOME</a>
-        <a href="LANDING-PAGE/index.html">ABOUT</a>
-        <a href="PROFILE-PAGE/index.html">PROFILE</a>
+        <a href="../HOME-PAGE/index.html">HOME</a>
+        <a href="../LANDING-PAGE/index.html">ABOUT</a>
+        <a href="../PROFILE-PAGE/index.html">PROFILE</a>
       </nav>
     </header>
 
@@ -19,16 +19,42 @@
 
           <p> Create an account by completing the fields below. </p>
 
-          <form id="formContainer">
-            <label id="userNameLabel">USERNAME</label>
-              <input id="userName" value="ENTER USERNAME"></input>
-            <label id="emailLabel">EMAIL</label>
-              <input id="email" value="ENTER EMAIL ADDRESS"></input>
-            <label id="passWordLabel">PASSWORD</label>
-              <input id="password" value="ENTER PASSWORD"></input>
+          <form
+            onSubmit="creatUser(event)"
+            id="formContainer">
 
-            <button> SUBMIT </button>
-          </form>
+            <label id="userNameLabel">USERNAME</label>
+
+              <input
+              type= "text"
+              id="userName"
+              placeholder="ENTER USERNAME"
+              />
+
+            <label id="emailLabel">EMAIL</label>
+
+              <input
+              type="text"
+              id="email"
+              placeholder="ENTER EMAIL ADDRESS"
+              />
+
+            <label id="passWordLabel">PASSWORD</label>
+
+              <input
+              type="password"
+              id="password"
+              placeholder="ENTER PASSWORD"
+              />
+
+            <button onclick="homePageReplace()">SUBMIT</button>
+
+            <script>
+            function homePageReplace() {
+              location.replace("../HOME-PAGE/index.html")
+            }
+          </script>
+        </form>
         <footer>
           "PEN-NY for your thoughts" &copy; 2019
         </footer>

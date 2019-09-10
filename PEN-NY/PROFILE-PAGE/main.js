@@ -15,6 +15,37 @@
 // }
 
 console.log('hello, world');
+
+
+function createUser(event) {
+  event.preventDefault();
+  const username = document.getElementById('userName');
+  const email =
+  document.getElementById('email');
+  const password = document.getElementById('password');
+
+  fetch('http://thesi.generalassemb.ly:8080/signup', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+              email: email.value,
+              password: password.value,
+              username: userName.value
+          })
+        })
+        .then((res) => {
+            return res.json();
+        })
+        .then((res) => {
+            localStorage.setItem('user', res.token);
+            createPost();
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+}
 //
 // function getData() {
 //     fetch('http://thesi.generalassemb.ly:8080/')
