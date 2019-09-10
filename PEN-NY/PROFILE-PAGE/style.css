@@ -164,8 +164,18 @@ p {
 }
 
 .posts {
-  height: 200px;
+  height: 700px;
   width: 100%;
   overflow-x: scroll;
   background-color: white;
+}
+
+.description {
+  width: 60%;
+  height: 100px;
+}
+
+.title {
+  width: 20%;
+  height: 100px;
 }

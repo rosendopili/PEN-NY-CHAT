@@ -1,4 +1,5 @@
 
+ // "http://thesi.generalassemb.ly:8080/user/comment",
 
 function postData(event) {
     event.preventDefault();
@@ -29,37 +30,6 @@ function postData(event) {
     })
 }
 
-function updateDom() {
-    document.querySelector('.signupForm').style.display = "none";
-    document.querySelector('.postForm').style.display = "block";
-
-    fetch("http://thesi.generalassemb.ly:8080/user/post", {
-        headers: {
-            "Authorization": "Bearer " + localStorage.getItem('user')
-        }
-    })
-    .then((res) => {
-        return res.json();
-    })
-    .then((res) => {
-        const list = document.querySelector('.posts');
-
-        for (let i = 0; i < res.length; i++) {
-            const item = document.createElement('li');
-            const title = document.createElement('h3');
-            const description = document.createElement('p');
-            item.appendChild(title);
-            item.appendChild(description);
-            title.innerText = res[i].title;
-            description.innerText = res[i].description;
-            list.appendChild(item);
-        }
-    })
-    .catch((err) => {
-        console.log(err);
-    })
-}
-
 function createPost(event) {
     event.preventDefault();
     const title = document.querySelector('.title');
@@ -79,6 +49,42 @@ function createPost(event) {
     .then((res) => {
         console.log(res);
         updateDom(res);
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+}
+
+function updateDom() {
+    document.querySelector('.signupForm').style.display = "none";
+    document.querySelector('.postForm').style.display = "block";
+
+    fetch("http://thesi.generalassemb.ly:8080/user/post", {
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem('user')
+        }
+    })
+    .then((res) => {
+        return res.json();
+    })
+    .then((res) => {
+        const list = document.querySelector('.posts');
+
+        //find a way to target the first object in an array and minus it from our return when res.length > i//
+          for (let i = 0; i < res.length; i++) {
+            const item = document.createElement('li');
+            const title = document.createElement('h3');
+            const description = document.createElement('p');
+            item.appendChild(title);
+            item.appendChild(description);
+            title.innerText = res[i].title;
+            description.innerText = res[i].description;
+            list.appendChild(item);
+            // if (i > res.length) {
+            //   title.innerText.shift();
+            //   description.innerText.shift();
+            // }
+        }
     })
     .catch((err) => {
         console.log(err);

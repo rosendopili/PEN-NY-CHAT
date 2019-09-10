@@ -26,16 +26,18 @@
             id="signUp">
             ENTER</button>
 
-          <!-- <button
+          <button
             onclick="document.getElementById('idWindow').style.display='block';"
             id="logIn">
-            LOG IN</button> -->
+            LOG IN</button>
 
         </div>
 
           <div id="idWindow" class="window">
 
-            <form class="window-content animate" action="main.jss">
+            <form
+            class="window-content animate"
+            action="main.js">
 
             <div class="popUp">
 
@@ -46,20 +48,28 @@
 
             <div class="container">
 
-                    <label for="username"><b>USERNAME</b></label>
+                    <label for="email"><b>EMAIL</b></label>
                     <input
-                      type="text"
-                      value="ENTER USERNAME"
-                      name="uname" required>
+                    type="text"
+                    value="EMAIL ADDRESS"
+                    class="email" required>
 
                     <label for ="pw"><b>PASSWORD</b></label>
-
                     <input
                     type="password"
                     value="Enter Password"
-                    name="pw" required>
+                    class="pw" required>
 
-                    <button type="submit">ENTER</button>
+                    <label for="username"><b>USERNAME</b></label>
+                    <input
+                    type="text"
+                    value="ENTER USERNAME"
+                    class="username" required>
+
+                    <button
+                    type="submit"
+                    onclick="navigateToProfilePage()"
+                    >ENTER</button>
 
               </div>
 
