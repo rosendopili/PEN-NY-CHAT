@@ -27,6 +27,7 @@ nav {
 }
 
 a {
+  font-family: 'Libre Baskerville', sans-serif;
   text-decoration: none;
   padding: 20px;
   margin: 0 100px 0 100px;
@@ -52,6 +53,7 @@ a {
 }
 
 footer {
+  font-family: 'Libre Baskerville', sans-serif;
   width: 100%;
   text-align: center;
   /* border-top: 5px #393985 solid; */
@@ -83,6 +85,7 @@ footer {
 }
 
 .submit {
+  font-family: 'Libre Baskerville', sans-serif;
   width: 50%;
   height: 60px;
   /* border: 2px #393985 solid; */
