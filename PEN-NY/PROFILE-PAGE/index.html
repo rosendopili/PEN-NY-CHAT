@@ -9,7 +9,7 @@
     <header>
       <nav>
         <a href="../HOME-PAGE/index.html">HOME</a>
-        <a href="../LANDING-PAGE/index.html">ABOUT</a>
+        <a href="../LANDING-PAGE/index.html">PENNY</a>
         <a href="../PROFILE-PAGE/index.html">PROFILE</a>
       </nav>
     </header>
@@ -48,8 +48,58 @@
               />
 
             <button
-            id="profileSubmitButton">SUBMIT<button/>
+            id="profileSubmitButton">SUBMIT</button>
         </form>
+
+        <button
+          onclick="document.getElementById('updateWindow').style.display='block';"
+          id="updateProfile">
+          UPDATE PROFILE</button>
+
+        </div>
+
+          <!-- <div id="updateWindow" class="window">
+
+            <form
+              class="window-content animate">
+          </div>
+
+          <div class="container">
+
+              <span onclick="document.getElementById('updateWindow').style.display='none'"
+              class ="close"
+              title="close window">
+              &times;</span>
+
+          </div>
+
+          <div id="updateProfileContainer">
+
+                  <label for="email">
+                    <b>MOBILE NUMBER</b>
+                  </label>
+
+                  <input
+                    type="text"
+                    value="MOBILE NUMBER"
+                    class="mobile" required>
+
+                  <button
+                  type="submit"
+                  >ENTER</button>
+
+            </div>
+
+            <div class="container">
+
+                  <button type="button" onclick="document.getElementById('updateWindow').style.display='none'"
+                  class="cancel">
+                  CANCEL</button>
+
+            </form>
+         </div> -->
+
+  <!-- modal not functioning correctly -->
 
         <form
             onSubmit = "createPost(event)"

@@ -24,7 +24,6 @@ function createPost(event) {
 }
 
 function updateDom() {
-  document.querySelector('.signupForm').style.display = "none";
   document.querySelector('.postForm').style.display = "block";
 
     fetch("http://thesi.generalassemb.ly:8080/user/post", {
@@ -36,7 +35,7 @@ function updateDom() {
         return res.json();
     })
     .then((res) => {
-        const list = document.querySelector('.posts');
+        const list = document.querySelector('.allPosts');
           for (let i = 0; i < res.length; i++) {
 
             const item = document.createElement('li');
@@ -115,3 +114,8 @@ function listAllPosts(event) {
 }
 
 listAllPosts();
+
+// function limitPosts() {
+//   const wallPost = document.querySelector(list.length);
+//     for (let 1 = 0; i )
+// }

@@ -1,6 +1,13 @@
 
  // "http://thesi.generalassemb.ly:8080/user/comment",
 
+ const modalLP = document.getElementById('updateWindow');
+ modalLP.onclick = function(event) {
+     if (event.target == modalLP) {
+         modalLP.style.display = "none";
+     }
+ };
+
 
 function postData(event) {
     event.preventDefault();
@@ -108,3 +115,15 @@ function updateDom() {
     })
 
 }
+//starting the get profile function
+// fetch("http://thesi.generalassemb.ly:8080/profile", {
+//         method: 'POST',
+//         headers: {
+//             "Content-Type": "application/json"
+//             "Authorization": "Bearer" + localStorage.getItem('user')
+//         },
+//         body: JSON.stringify({
+//             email: email.value,
+//             password: password.value,
+//             username: username.value
+//         })
