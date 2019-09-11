@@ -1,31 +1,21 @@
+function createPost(event) {
+    event.preventDefault();
+    const title = document.querySelector('.title');
+    const description = document.querySelector('.description');
 
-function getData() {
-    fetch('http://thesi.generalassemb.ly:8080/')
+    fetch("http://thesi.generalassemb.ly:8080/post", {
+        method: 'POST',
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem('user'),
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            title: title.value,
+            description: description.value
+        })
+    })
     .then((res) => {
         console.log(res);
-        return res.json();
-    })
-    .catch((err) => {
-        console.log(err);
-    })
-}
-
-function postData() {
-    fetch('http://thesi.generalassemb.ly:8080/signup', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                email: "BLAHaaaaaaaaa@BLAH.COM",
-                password: "12345678aa",
-                username: "BLAH aaaaaaaaBLAH"
-            })
-    })
-    .then((res) => {
-        return res.json();
-    })
-    .then((res) => {
         updateDom(res);
     })
     .catch((err) => {
@@ -33,10 +23,141 @@ function postData() {
     })
 }
 
-function updateDom(data) {
-    console.log(data.token);
-    const text = document.querySelector('p');
-    text.innerText = data.token;
+
+
+
+// trying to re-format our code so that the updateDom function doesn't contain the fetch request.
+// function getPostData() {
+//   fetch("http://thesi.generalassemb.ly:8080/user/post", {
+//     headers: {
+//       "Authorization" : "Bearer" + localStorage.getItem('user')
+//     }
+//   })
+//   .then((res) => {
+//     return res.json();
+//   })
+//   .then((res) => {
+//       console.log(res);
+//       updateDom(res);
+//   })
+//   .catch((err) => {
+//       console.log(err);
+//   })
+// };
+//
+// function updateDom() {
+//   document.querySelector('.signupForm').style.display = "none";
+//   document.querySelector('.postForm').style.display = "block";
+//
+//   const list = document.querySelector('.posts')
+//   for (let i = 0; i < getPostData.length; i++){
+//
+//       const item = document.createElement('li');
+//       const title = document.createElement('h3');
+//       const description = document.createElement('p');
+//       item.appendChild(title);
+//       item.appendChild(description);
+//       title.innerText = getPostData[i].title;
+//       description.innerText = getPostData[i].description;
+//       list.appendChild(item);
+// }
+// };
+//
+// updateDom();
+
+function updateDom() {
+  document.querySelector('.signupForm').style.display = "none";
+  document.querySelector('.postForm').style.display = "block";
+
+    fetch("http://thesi.generalassemb.ly:8080/user/post", {
+        headers: {
+            "Authorization": "Bearer " + localStorage.getItem('user')
+        }
+    })
+    .then((res) => {
+        return res.json();
+    })
+    .then((res) => {
+        const list = document.querySelector('.posts');
+
+        // find a way to target the first object in an array and minus it from our return when res.length > i//
+          for (let i = 0; i < res.length; i++) {
+
+            const item = document.createElement('li');
+            const title = document.createElement('h3');
+            const description = document.createElement('p');
+            // const buttonDelete = document.createElement('button');
+            item.appendChild(title);
+            item.appendChild(description);
+            // buttonDelete.appendChild(item);
+            title.innerText = res[i].title;
+            description.innerText = res[i].description;
+            list.appendChild(item);
+            // list.appendChild(buttonDelete);
+            //delete button not functioning.
+          }
+        })
+            //
+            // if (i > 0) {
+            //   title.innerText.pop(1);
+            //   description.innerText.pop(1);
+            // }
+
+      //   let filtered = list.length.filter(function(value, index){
+      //     return value > 0;
+      //   if (list.length[i] === 1) {
+      //     list.length.splice(i, 1);
+      //   //attempt to splice the array^
+      // }
+
+
+//     })
+    .catch((err) => {
+        console.log(err);
+    })
+
 }
 
-postData()
+postData();
+
+function listAllPosts(event) {
+    // event.preventDefault();
+    const posts = document.querySelector('#contentWall');
+
+    fetch("http://thesi.generalassemb.ly:8080/post/list", {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
+    })
+    .then((res) => {
+        return res.json();
+    })
+
+    .then((res) => {
+        const list = document.querySelector('.allPosts');
+
+        // find a way to target the first object in an array and minus it from our return when res.length > i//
+          for (let i = 0; i < res.length; i++) {
+
+            const item = document.createElement('li');
+            const title = document.createElement('h3');
+            const description = document.createElement('p');
+            // const buttonDelete = document.createElement('button');
+            item.appendChild(title);
+            item.appendChild(description);
+            // buttonDelete.appendChild(item);
+            title.innerText = res[i].title;
+            description.innerText = res[i].description;
+            list.appendChild(item);
+            // list.appendChild(buttonDelete);
+            //delete button not functioning.
+          }
+        })
+
+    .catch((err) => {
+        console.log(err);
+    })
+}
+
+listAllPosts();
