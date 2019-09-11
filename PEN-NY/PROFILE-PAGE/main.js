@@ -128,7 +128,7 @@ function updateDom() {
             description.innerText = res[i].description;
             list.appendChild(item);
             // list.appendChild(buttonDelete);
-            //delete button not functioning. 
+            //delete button not functioning.
           }
         })
             //
@@ -152,36 +152,47 @@ function updateDom() {
 
 }
 
-// function listAllPosts(event) {
-//     event.preventDefault();
-//     const posts = document.querySelector('.posts');
-//
-//     fetch("http://thesi.generalassemb.ly:8080/post/list", {
-//             method: 'GET',
-//             headers: {
-//               "Authorization": "Bearer " + localStorage.getItem('user')
-//             },
-//             body: JSON.stringify({
-//                 posts: value.posts,
-//             })
-//     })
-//     .then((res) => {
-//         return res.json();
-//     })
-//     .then((res) =>{
-//       const list = document.querySelector('.posts');
-//       for (let i = 0; i < res.length; i++) {
-//         const item = document.createElement('li');
-//         const title = document.createElement('h3');
-//         const description = document.createElement('p');
-//         item.appendChild(title);
-//         item.appendChild(description);
-//         title.innerText = res[i].title;
-//         description.innerText = res[i].description;
-//         list.appendChild(item);
-//       }
-//     })
-//     .catch((err) => {
-//         console.log(err);
-//     })
-// }
+function listAllPosts(event) {
+    // event.preventDefault();
+    const posts = document.querySelector('.posts');
+
+    fetch("http://thesi.generalassemb.ly:8080/post/list", {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            // body: JSON.stringify({
+            //     posts: posts.value,
+            // })
+    })
+    .then((res) => {
+        return res.json();
+    })
+
+    .then((res) => {
+        const list = document.querySelector('.posts');
+
+        // find a way to target the first object in an array and minus it from our return when res.length > i//
+          for (let i = 0; i < res.length; i++) {
+
+            const item = document.createElement('li');
+            const title = document.createElement('h3');
+            const description = document.createElement('p');
+            // const buttonDelete = document.createElement('button');
+            item.appendChild(title);
+            item.appendChild(description);
+            // buttonDelete.appendChild(item);
+            title.innerText = res[i].title;
+            description.innerText = res[i].description;
+            list.appendChild(item);
+            // list.appendChild(buttonDelete);
+            //delete button not functioning.
+          }
+        })
+
+    .catch((err) => {
+        console.log(err);
+    })
+}
+
+listAllPosts();
