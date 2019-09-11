@@ -29,6 +29,7 @@ nav {
 }
 
 a {
+  font-family: 'Libre Baskerville', sans-serif;
   text-decoration: none;
   padding: 20px;
   margin-right: 100px;
@@ -71,19 +72,22 @@ img {
   font-size: 30px;
   letter-spacing: 5px;
   line-height: 40px;
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
   color: #46B882;
   box-shadow: 0px 10px 15px #393985;
 }
 
 #userNameLabel {
+  font-family: 'Libre Baskerville', sans-serif;
   align-self: center;
   font-size: 30px;
   letter-spacing: 5px;
   line-height: 40px;
   text-align: center;
   color: #c15827;
+  margin-top: 30px;
+  magrin-bottom: 0;
 }
 
 .email {
@@ -101,11 +105,13 @@ img {
 }
 
 #emailLabel {
+  font-family: 'Libre Baskerville', sans-serif;
   align-self: center;
   font-size: 30px;
   letter-spacing: 5px;
   line-height: 40px;
   margin-top: 30px;
+  margin-bottom: 0px;
   text-align: center;
   color: #c15827;
 }
@@ -125,6 +131,7 @@ img {
 }
 
 #passWordLabel {
+  font-family: 'Libre Baskerville', sans-serif;
   align-self: center;
   font-size: 30px;
   letter-spacing: 5px;
@@ -136,8 +143,14 @@ img {
 }
 
 button {
+<<<<<<< HEAD
   width: 10%;
   height: 20px;
+=======
+  font-family: 'Libre Baskerville', sans-serif;
+  width: 50%;
+  height: 60px;
+>>>>>>> d1fd9f3d822d104b2ca724dba10c5212e52415c2
   border: none;
   align-self: right;
   background-color: #F58994;
@@ -150,6 +163,7 @@ button {
 }
 
 footer {
+  font-family: 'Libre Baskerville', sans-serif;
   width: 100%;
   text-align: center;
   padding-top: 15px;
