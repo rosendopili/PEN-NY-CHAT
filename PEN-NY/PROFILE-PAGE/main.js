@@ -55,9 +55,50 @@ function createPost(event) {
     })
 }
 
+
+
+// trying to re-format our code so that the updateDom function doesn't contain the fetch request.
+// function getPostData() {
+//   fetch("http://thesi.generalassemb.ly:8080/user/post", {
+//     headers: {
+//       "Authorization" : "Bearer" + localStorage.getItem('user')
+//     }
+//   })
+//   .then((res) => {
+//     return res.json();
+//   })
+//   .then((res) => {
+//       console.log(res);
+//       updateDom(res);
+//   })
+//   .catch((err) => {
+//       console.log(err);
+//   })
+// };
+//
+// function updateDom() {
+//   document.querySelector('.signupForm').style.display = "none";
+//   document.querySelector('.postForm').style.display = "block";
+//
+//   const list = document.querySelector('.posts')
+//   for (let i = 0; i < getPostData.length; i++){
+//
+//       const item = document.createElement('li');
+//       const title = document.createElement('h3');
+//       const description = document.createElement('p');
+//       item.appendChild(title);
+//       item.appendChild(description);
+//       title.innerText = getPostData[i].title;
+//       description.innerText = getPostData[i].description;
+//       list.appendChild(item);
+// }
+// };
+//
+// updateDom();
+
 function updateDom() {
-    document.querySelector('.signupForm').style.display = "none";
-    document.querySelector('.postForm').style.display = "block";
+  document.querySelector('.signupForm').style.display = "none";
+  document.querySelector('.postForm').style.display = "block";
 
     fetch("http://thesi.generalassemb.ly:8080/user/post", {
         headers: {
@@ -70,8 +111,16 @@ function updateDom() {
     .then((res) => {
         const list = document.querySelector('.posts');
 
-        //find a way to target the first object in an array and minus it from our return when res.length > i//
+        // find a way to target the first object in an array and minus it from our return when res.length > i//
           for (let i = 0; i < res.length; i++) {
+
+            // let filtered = res.length.filter(function(value, index){
+            //   return value > 0;
+            // } (attempt to filter the array)
+            // if (res.length[i] === 1) {
+            //   res.length.splice(i, 1);
+            //attempt to splice the array^
+
             const item = document.createElement('li');
             const title = document.createElement('h3');
             const description = document.createElement('p');
@@ -80,10 +129,10 @@ function updateDom() {
             title.innerText = res[i].title;
             description.innerText = res[i].description;
             list.appendChild(item);
-
-            // if (i > res.length) {
-            //   title.innerText.shift();
-            //   description.innerText.shift();
+            // 
+            // if (i > 0) {
+            //   title.innerText.pop(1);
+            //   description.innerText.pop(1);
             // }
         }
     })
