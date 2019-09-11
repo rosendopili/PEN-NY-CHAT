@@ -28,11 +28,11 @@ nav {
 a {
   text-decoration: none;
   padding: 20px;
-  margin: 0 100px 0 100px;
-  font-size: 30px;
+  margin-right: 100px;
+  font-size: 20px;
   letter-spacing: 5px;
   line-height: 40px;
-  color: #c15827;
+  color: #c15827;  
 }
 
 #imageContainer{
