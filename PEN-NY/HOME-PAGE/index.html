@@ -14,53 +14,31 @@
         <a href="../PROFILE-PAGE/index.html">PROFILE</a>
       </nav>
     </header>
-    <div class="content-wrapper">
-      <!-- <div id="profileinfo">
-        <img src="" alt="profilepic" /> -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed
-          nulla nisl. Donec ullamcorper nisi non magna commodo, in dignissim
-          nisi convallis. Proin vitae massa ut est convallis ultricies. Ut
-          laoreet pellentesque ultricies. Vestibulum imperdiet magna quis
-          ligula pretium feugiat. Donec viverra iaculis magna a commodo.
-          Phasellus accumsan elit nec est pulvinar lobortis. Morbi nunc enim,
-          sagittis eu convallis vitae, rhoncus nec ex. Sed bibendum in massa
-          porttitor imperdiet. Sed ante est, finibus eget accumsan vel,
-          efficitur ac magna. Maecenas mollis dolor vel metus dignissim,
-          sit amet pellentesque nibh blandit. Praesent pretium justo
-          ullamcorper orci pharetra ullamcorper. Nullam ac urna lorem.</p>
-        <p>Phasellus pellentesque eu elit vitae ornare. Class aptent taciti
-          sociosqu ad litora torquent per conubia nostra, per inceptos
-          himenaeos. Nam euismod libero vitae velit sodales feugiat. Aliquam
-          laoreet suscipit metus nec mattis. Etiam eu imperdiet risus.
-          Aliquam eget lectus eu dui semper iaculis. Class aptent taciti
-          sociosqu ad litora torquent per conubia nostra, per inceptos
-          himenaeos. Sed ut diam eget magna hendrerit mollis vel a lacus.
-          Integer consequat ornare nisl, in ultricies magna.</p>
-      </div>
-      <form action="/action_page.php" id="usrform">
-        <input type="submit" class="submit">
-      </form>
+
+    <div id=chatBoxContainer>
+        <form
+            onSubmit = "createPost(event)"
+            class="postForm">
+            <input
+                type="text"
+                class="title"
+                placeholder="title"
+            />
+            <input
+                type="text"
+                class="description"
+                placeholder="description"
+            />
+            <input id="messageSubmit" type="submit"/>
+        </form>
+
+    <div id="content"
       <div id="contentWall">
+        <ul class="allPosts">
+        </ul>
         </div>
-        <!-- <form action="/action_page.php" id="usrform">
-          <input type="submit" class="submit">
-        </form> -->
 
 
-      <!-- <div id="blog-posts">
-        <div class="first-comment">
-          <form action="/action_page.php" id="usrform">
-            <input type="submit">
-          </form>
-        </div>
-        <div class="second-comment">
-          <h2></h2>
-        </div>
-        <div class="third-comment">
-          <h2></h2>
-        </div> -->
-      <!-- </div>
-    </div> -->
       <script src='main.js'></script>
 
     <footer>
