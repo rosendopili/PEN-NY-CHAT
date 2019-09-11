@@ -1,13 +1,15 @@
 
  // "http://thesi.generalassemb.ly:8080/user/comment",
 
+
+
 function postData(event) {
     event.preventDefault();
     const email = document.querySelector('.email');
     const password = document.querySelector('.password');
     const username = document.querySelector('.username');
 
-    fetch('http://thesi.generalassemb.ly:8080/signup', {
+    fetch("http://thesi.generalassemb.ly:8080/signup", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -54,6 +56,7 @@ function createPost(event) {
         console.log(err);
     })
 }
+
 
 
 
@@ -114,29 +117,82 @@ function updateDom() {
         // find a way to target the first object in an array and minus it from our return when res.length > i//
           for (let i = 0; i < res.length; i++) {
 
-            // let filtered = res.length.filter(function(value, index){
-            //   return value > 0;
-            // } (attempt to filter the array)
-            // if (res.length[i] === 1) {
-            //   res.length.splice(i, 1);
-            //attempt to splice the array^
-
             const item = document.createElement('li');
             const title = document.createElement('h3');
             const description = document.createElement('p');
+            // const buttonDelete = document.createElement('button');
             item.appendChild(title);
             item.appendChild(description);
+            // buttonDelete.appendChild(item);
             title.innerText = res[i].title;
             description.innerText = res[i].description;
             list.appendChild(item);
-            // 
+            // list.appendChild(buttonDelete);
+            //delete button not functioning.
+          }
+        })
+            //
             // if (i > 0) {
             //   title.innerText.pop(1);
             //   description.innerText.pop(1);
             // }
-        }
+
+      //   let filtered = list.length.filter(function(value, index){
+      //     return value > 0;
+      //   if (list.length[i] === 1) {
+      //     list.length.splice(i, 1);
+      //   //attempt to splice the array^
+      // }
+
+
+//     })
+    .catch((err) => {
+        console.log(err);
     })
+
+}
+
+function listAllPosts(event) {
+    // event.preventDefault();
+    const posts = document.querySelector('.posts');
+
+    fetch("http://thesi.generalassemb.ly:8080/post/list", {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            // body: JSON.stringify({
+            //     posts: posts.value,
+            // })
+    })
+    .then((res) => {
+        return res.json();
+    })
+
+    .then((res) => {
+        const list = document.querySelector('.posts');
+
+        // find a way to target the first object in an array and minus it from our return when res.length > i//
+          for (let i = 0; i < res.length; i++) {
+
+            const item = document.createElement('li');
+            const title = document.createElement('h3');
+            const description = document.createElement('p');
+            // const buttonDelete = document.createElement('button');
+            item.appendChild(title);
+            item.appendChild(description);
+            // buttonDelete.appendChild(item);
+            title.innerText = res[i].title;
+            description.innerText = res[i].description;
+            list.appendChild(item);
+            // list.appendChild(buttonDelete);
+            //delete button not functioning.
+          }
+        })
+
     .catch((err) => {
         console.log(err);
     })
 }
+
+listAllPosts();
