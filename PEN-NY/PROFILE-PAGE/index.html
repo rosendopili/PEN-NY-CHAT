@@ -47,14 +47,10 @@
               placeholder="ENTER USERNAME"
               />
 
-            <input
-            type="button"
-            value="SUBMIT"
-            id="profileSubmitButton"
-            />
-
+            <button
+            id="profileSubmitButton">SUBMIT<button/>
         </form>
-    <div id=chatBoxContainer>
+
         <form
             onSubmit = "createPost(event)"
             class="postForm">
@@ -73,18 +69,11 @@
 
         <ul class="posts">
         </ul>
-    </div>
+
         <footer>
           "PEN-NY for your thoughts" &copy; 2019
         </footer>
-        <!-- <script>
-        // document.getElementByClass("postForm").addEventListener("click", alignCenter);
 
-        document.getElementByClass("postForm").onclick = function alignCenter() {
-
-          document.getElementByClass("postForm").display = list-item;
-        }
-        </script> -->
         <script src="main.js"></script>
       </body>
 </html>

@@ -23,9 +23,6 @@ function createPost(event) {
     })
 }
 
-
-
-
 function updateDom() {
   document.querySelector('.signupForm').style.display = "none";
   document.querySelector('.postForm').style.display = "block";

@@ -31,6 +31,8 @@ function postData(event) {
     })
 }
 
+
+
 function createPost(event) {
     event.preventDefault();
     const title = document.querySelector('.title');
