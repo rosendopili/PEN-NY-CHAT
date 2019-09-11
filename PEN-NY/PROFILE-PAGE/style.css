@@ -3,8 +3,8 @@ body {
   width: 100%;
   margin: 0 auto;
   font-family: verdana, sans-serif;
-  background-image: url(../images/BACKGROUND-transparency.png);
-  background-repeat: no-repeat;
+  background-image: url(images/BACKGROUND-transparency.png);
+  background-repeat: repeat;
   background-size: 100%;
   background-position: center;
 }
@@ -174,7 +174,7 @@ footer {
   background-color: white;
 }
 
-  /* p {
+p {
   text-align: center;
   margin-top: 100px;
   margin-bottom: 10px;
@@ -182,7 +182,7 @@ footer {
   color: #ED5555;
 }
 
-.postForm{
+.postForm {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -227,9 +227,9 @@ footer {
 #messageSubmit {
   font-family: 'Libre Baskerville', sans-serif;
   width: 100%;
-  height: 60px; */
+  height: 60px;
   /* border: 2px #393985 solid; */
-  /* border: none;
+  border: none;
   background-color: #F58994;
   font-size: 30px;
   letter-spacing: 5px;
@@ -248,7 +248,7 @@ footer {
 li {
   border: 1px solid black;
   margin: 30px;
-} */
+}
 
 #profileSubmitButton {
   width: 100%;
