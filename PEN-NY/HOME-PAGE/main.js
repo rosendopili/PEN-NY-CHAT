@@ -137,3 +137,25 @@ listAllPosts();
 //   const wallPost = document.querySelector(list.length);
 //     for (let 1 = 0; i )
 // }
+
+
+// function deleteComment() {
+//
+//   doc.querySelector(".delete");
+//
+//   fetch('http://thesi.generalassemb.ly:8080/comment/2', {
+//       method: "DELETE",
+//       headers: {
+//           "Authorization": "Bearer" +
+//           "Content-Type": "application/json"
+//       },
+//       .then((res) => {
+//           console.log(res);
+//       })
+//       .catch((err) => {
+//           console.log(err);
+//       })
+//
+// })
+//
+// deleteComment();
