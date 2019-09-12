@@ -92,7 +92,6 @@ function updateDom() {
 }
 
 function listAllPosts(event) {
-    // event.preventDefault();
     const posts = document.querySelector('#contentWall');
 
     fetch("http://thesi.generalassemb.ly:8080/post/list", {
@@ -108,21 +107,38 @@ function listAllPosts(event) {
     .then((res) => {
         const list = document.querySelector('.allPosts');
 
-        // find a way to target the first object in an array and minus it from our return when res.length > i//
           for (let i = 0; i < res.length; i++) {
 
             const item = document.createElement('li');
             const title = document.createElement('h3');
             const description = document.createElement('p');
-            // const buttonDelete = document.createElement('button');
+            const commentInput =
+            document.createElement('input');
+            const buttonDelete = document.createElement('input');
+
+
             item.appendChild(title);
             item.appendChild(description);
-            // buttonDelete.appendChild(item);
+            //added comment button to the array//
+            commentInput.appendChild(item);
+            //added delete button to the array//
+            buttonDelete.appendChild(item);
+
+
             title.innerText = res[i].title;
             description.innerText = res[i].description;
             list.appendChild(item);
-            // list.appendChild(buttonDelete);
-            //delete button not functioning.
+            list.appendChild(commentInput);
+            list.appendChild(buttonDelete);
+
+
+            commentInput.setAttribute("class", "comment");
+            commentInput.setAttribute("type", "submit");
+            commentInput.setAttribute("value", "comment");
+
+            buttonDelete.setAttribute("class", "delete");
+            buttonDelete.setAttribute("type", "submit");
+            buttonDelete.setAttribute("value", "delete");
           }
         })
 
