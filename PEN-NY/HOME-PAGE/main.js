@@ -150,6 +150,18 @@ function listAllPosts(event) {
 
 listAllPosts();
 
+//attempt to reverse order of posts list
+//post disappeared on attempt
+// function reverseList(arr) {
+//      const newList = [];
+//      for (let i = arr.length - 1; i >= 0; i--) {
+//          newList.push(arr[i]);
+//      }
+//      return newList;
+//  }
+
+
+
 // function limitPosts() {
 //   const wallPost = document.querySelector(list.length);
 //     for (let 1 = 0; i )
