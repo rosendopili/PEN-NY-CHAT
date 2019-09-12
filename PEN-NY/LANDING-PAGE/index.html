@@ -16,7 +16,7 @@
     </header>
 
     <div
-    class="logo-container">
+      class="logo-container">
       <img class="logo"
       src="images/PEN-NY.png"
       alt="logo">
@@ -37,14 +37,17 @@
 
         </div>
 
-          <div id="idWindow" class="window">
+          <div
+          id="idWindow"
+          class="window">
 
             <form
             class="window-content animate"
             action="../PROFILE-PAGE/index.html"
             onsubmit="getProfile">
 
-            <div class="popUp">
+            <div
+            class="popUp">
 
                 <span onclick="document.getElementById('idWindow').style.display='none'"
                 class ="close"
@@ -52,7 +55,8 @@
                 &times;</span>
             </div>
 
-            <div class="container">
+            <div
+            class="container">
 
                     <label for="email">
                       <b>EMAIL</b>
@@ -90,14 +94,15 @@
 
               </div>
 
-              <div class="container">
+              <div
+              class="container">
 
                     <button type="button" onclick="document.getElementById('idWindow').style.display='none'"
                     class="cancel">
                     CANCEL</button>
             </form>
         </div>
-
+      </div>
         <script>
           function navigateToProfilePage() {
             location.replace("../PROFILE-PAGE/index.html")

@@ -6,6 +6,8 @@ modal.onclick = function(event) {
     }
 };
 
+
+//log in functionality//
 function logIn(event) {
     event.preventDefault();
     const email = document.querySelector('.email');
