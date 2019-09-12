@@ -209,7 +209,7 @@ function createComment(event) {
         for (let i = 0; i < res.length; i++){
 
           const commentInput =
-          document.createElement('li');
+          document.createElement('input');
           const commentContent =
           document.createElement('p');
 
@@ -221,6 +221,7 @@ function createComment(event) {
 
           commentInput.setAttribute("id", "commentInput");
           commentContent.setAttribute("id", "commentContent");
+          commentInput.setattribute("type", "text")
         }
       })
 
