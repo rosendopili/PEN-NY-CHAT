@@ -130,6 +130,10 @@ li {
   margin: 30px;
   box-shadow: 0px 5px 10px #393985;
   text-align: center;
+  color: #615959;
+  line-height: 40px;
+  border-radius: 20px;
+  background-color: white;
 }
 
 #profileSubmitButton {
@@ -228,4 +232,17 @@ li {
 
 .comment:hover {
  opacity: 0.8;
+}
+
+.allPosts {
+  margin: 10px auto;
+  height: 700px;
+  width: 80%;
+  overflow-y: scroll;
+  /* border: 3px solid #9EA3A0; */
+  background-image: radial-gradient(#DAF0F0, #F2FAFA, #F0F7F7, white);
+  border: none;
+  box-shadow: 0px 20px 30px #393985;
+  margin-bottom: 100px;
+  border-radius: 50px;
 }
