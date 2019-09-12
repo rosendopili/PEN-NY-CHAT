@@ -126,31 +126,31 @@ function updateDom() {
 }
 
 // starting the create profile function
-// function createProfile();
-//   event.preventDefault();
-//   const email = document.querySelector('.additionalEmail');
-//   const password = document.querySelector('.mobile');
-//   const username = document.querySelector('.address');
-//
-//   fetch("http://thesi.generalassemb.ly:8080/profile", {
-//         method: 'POST',
-//         headers: {
-//             "Content-Type": "application/json"
-//             "Authorization": "Bearer" + localStorage.getItem('user')
-//         },
-//         body: JSON.stringify({
-//             additionalEmail: email.value,
-//             mobile: mobile.value,
-//             address: address.value
-//         })
-//       })
-//   .then((res) => {
-//     return res.json();
-//   })
-//   .then((res) => {
-//     localStorage.setItem('user', res.token);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   })
-// }
+function createProfile(event) {
+  event.preventDefault();
+  const additionalEmail = document.querySelector('.additionalEmail');
+  const mobile = document.querySelector('.mobile');
+  const address = document.querySelector('.address');
+
+  fetch("http://thesi.generalassemb.ly:8080/profile", {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json"
+            // "Authorization": "Bearer" + localStorage.getItem('user')
+        },
+        body: JSON.stringify({
+            additionalEmail: additionalEmail.value,
+            mobile: mobile.value,
+            address: address.value
+        })
+      })
+  .then((res) => {
+    return res.json();
+  })
+  .then((res) => {
+    localStorage.setItem('user', res.token);
+  })
+  .catch((err) => {
+    console.log(err);
+  })
+}

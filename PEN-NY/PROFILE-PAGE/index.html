@@ -43,7 +43,10 @@
               />
 
             <button
-            id="profileSubmitButton">SUBMIT</button>
+            id="profileSubmitButton">
+            SUBMIT
+            </button>
+
         </form>
 
         <button
@@ -78,7 +81,7 @@
 
                   <input
                     type="text"
-                    value="ADDITIONAL EMAIL"
+                    placeholder="ADDITIONAL EMAIL"
                     class="additionalEmail" required>
 
                   <label for="mobile">
@@ -87,7 +90,7 @@
 
                   <input
                     type="text"
-                    value="MOBILE NUMBER"
+                    placeholder="MOBILE NUMBER"
                     class="mobile"
                     required>
 
@@ -97,12 +100,14 @@
 
                   <input
                     type="text"
-                    value="ADDRESS"
+                    placeholder="ADDRESS"
                     class="address" required>
 
                   <button
-                  type="submit"
-                  >ENTER</button>
+                  onclick="createProfile(event)"
+                  type="submit">
+                  ENTER
+                  </button>
 
                   <button type="button" onclick="document.getElementById('updateWindow').style.display='none'"
                   class="cancel">
@@ -111,8 +116,9 @@
             </form>
 
          </div>
+       </div>
 
-        <form
+          <form
             onSubmit = "createPost(event)"
             class="postForm">
             <input
@@ -131,7 +137,7 @@
               placeholder="submit"
             />
 
-        </form>
+          </form>
 
         <ul class="posts">
         </ul>
