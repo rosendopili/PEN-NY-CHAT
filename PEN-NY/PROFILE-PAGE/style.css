@@ -36,23 +36,16 @@ a {
   color: #c15827;
 }
 
-#imageContainer{
+.logoContainer {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  margin: 0 auto;
 }
 
-#profilePicture{
-  width: 100px;
-  height: 100px;
-}
-
-img {
-  border: none;
-  border-radius: 15%;
-  margin-top: 5%;
-  margin-bottom: 0;
-  box-shadow: 0px 10px 30px #393985;
+.logo {
+  width: 50%;
+  height: 50%;
 }
 
 .signupForm{
