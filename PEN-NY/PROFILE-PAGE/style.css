@@ -368,3 +368,13 @@ span.psw {
 .cancelbtn {
    width: 100%;
 }
+
+#commentInput, #commentContent {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #393985;
+  box-sizing: border-box;
+  border: none;
+}

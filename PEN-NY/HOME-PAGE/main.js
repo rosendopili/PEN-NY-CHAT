@@ -139,7 +139,7 @@ function listAllPosts(event) {
             buttonDelete.setAttribute("class", "delete");
             buttonDelete.setAttribute("type", "submit");
             buttonDelete.setAttribute("value", "delete");
-            buttonDelete.setAttribute("onclick", "deleteComment(event)")
+            buttonDelete.setAttribute("onclick", "deletePost(event)")
           }
         })
 
@@ -156,11 +156,11 @@ listAllPosts();
 // }
 
 
-function deleteComment(event) {
+function deletePost(event) {
   event.preventDefault();
   document.querySelector(".delete");
 
-  fetch('http://thesi.generalassemb.ly:8080/comment/2', {
+  fetch('http://thesi.generalassemb.ly:8080/comment/1', {
       method: "DELETE",
       headers: {
           "Authorization": "Bearer" +
@@ -175,7 +175,7 @@ function deleteComment(event) {
           console.log(err);
       })
       .then((res) => {
-        
+
       })
 
 }

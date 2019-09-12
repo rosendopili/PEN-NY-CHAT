@@ -105,11 +105,14 @@ function updateDom() {
             commentInput.setAttribute("class", "comment");
             commentInput.setAttribute("type", "submit");
             commentInput.setAttribute("value", "comment");
+            commentInput.setAttribute("onclick", "createComment(event)")
 
             buttonDelete.setAttribute("class", "delete");
             buttonDelete.setAttribute("type", "submit");
             buttonDelete.setAttribute("value", "delete");
-            buttonDelete.setAttribute("onclick", "deleteComment(event)");
+            buttonDelete.setAttribute("onclick", "deletePost(event)");
+
+            description.setAttribute("class", "wallPost");
           }
         })
 
@@ -157,11 +160,11 @@ function createProfile(event) {
   })
 }
 
-function deleteComment(event) {
+function deletePost(event) {
   event.preventDefault();
   document.querySelector(".delete");
 
-  fetch('http://thesi.generalassemb.ly:8080/comment/2', {
+  fetch('http://thesi.generalassemb.ly:8080/comment/1', {
       method: "DELETE",
       headers: {
           "Authorization": "Bearer" +
@@ -175,8 +178,50 @@ function deleteComment(event) {
       .catch((err) => {
           console.log(err);
       })
-      .then((res) => {
+      // .then((res) => {
+      //
+      // })
+}
 
+function createComment(event) {
+  event.preventDefault();
+  document.querySelector(".comment");
+
+  fetch('http://thesi.generalassemb.ly:8080/comment/3', {
+      method: "POST",
+      headers: {
+          "Authorization": "Bearer" +
+          localStorage.getItem('user'),
+          "Content-Type": "application/json"
+        },
+      })
+      .then((res) => {
+          console.log(res);
+      })
+      .then((res) => {
+        localStorage.setItem('user', res.token);
+      })
+      .catch((err) => {
+          console.log(err);
+      })
+      .then((res) => {
+        const listComment = document.querySelector('.wallPost');
+        for (let i = 0; i < res.length; i++){
+
+          const commentInput =
+          document.createElement('li');
+          const commentContent =
+          document.createElement('p');
+
+
+          listComment.appendChild(commentInput);
+          listComment.appendChild(commentContent);
+          commentContent.innerText = res[i].commentInput;
+          commentInput.innerText = res[i].commentInput;
+
+          commentInput.setAttribute("id", "commentInput");
+          commentContent.setAttribute("id", "commentContent");
+        }
       })
 
 }
