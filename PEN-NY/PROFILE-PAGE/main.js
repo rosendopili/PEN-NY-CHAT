@@ -206,7 +206,9 @@ function createComment(event) {
         console.log(err);
     })
     .then((res) => {
-        const listComment = document.querySelector('.wallPost');
+        const listComment =
+//.wallPost is the class assigned to the LI's being populated by the updateDOM function//
+        document.querySelector('.wallPost');
         for (let i = 0; i < res.length; i++){
 
           const commentInput =
