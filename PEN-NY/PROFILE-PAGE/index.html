@@ -14,11 +14,6 @@
       </nav>
     </header>
 
-        <!-- <div id="imageContainer">
-          <img id="profilePicture" src="images/profile.png" alt="PROFILE PICTURE"></img>
-        </div> -->
-
-
           <form
             onSubmit="postData(event)"
             class="signupForm">
@@ -50,56 +45,72 @@
             <button
             id="profileSubmitButton">SUBMIT</button>
         </form>
-<!-- issues with modal persisting
+
         <button
           onclick="document.getElementById('updateWindow').style.display='block';"
           id="updateProfile">
           UPDATE PROFILE</button>
 
-        </div>
+        <!-- <div id="imageContainer">
+          <img id="profilePicture" src="images/profile.png" alt="PROFILE PICTURE"></img>
+        </div> -->
 
-          <div id="updateWindow" class="window">
 
-            <form
-              class="window-content animate"
-              onsubmit="">
+          <div
+          id="updateWindow"
+          class="window">
 
-          <div class="container">
+            <form class="window-content animate">
+
+          <div class="popUp">
 
               <span onclick="document.getElementById('updateWindow').style.display='none'"
               class ="close"
               title="close window">
               &times;</span>
-
           </div>
 
-          <div id="updateProfileContainer">
+          <div class="container">
 
                   <label for="email">
+                    <b>ADDITIONAL EMAIL</b>
+                      </label>
+
+                  <input
+                    type="text"
+                    value="ADDITIONAL EMAIL"
+                    class="additionalEmail" required>
+
+                  <label for="mobile">
                     <b>MOBILE NUMBER</b>
-                  </label>
+                      </label>
 
                   <input
                     type="text"
                     value="MOBILE NUMBER"
-                    class="mobile" required>
+                    class="mobile"
+                    required>
+
+                  <label for="address">
+                    <b>ADDRESS</b>
+                      </label>
+
+                  <input
+                    type="text"
+                    value="ADDRESS"
+                    class="address" required>
 
                   <button
                   type="submit"
                   >ENTER</button>
-
-            </div>
-
-            <div class="container">
 
                   <button type="button" onclick="document.getElementById('updateWindow').style.display='none'"
                   class="cancel">
                   CANCEL</button>
 
             </form>
-         </div> -->
 
-  <!-- modal not functioning correctly -->
+         </div>
 
         <form
             onSubmit = "createPost(event)"

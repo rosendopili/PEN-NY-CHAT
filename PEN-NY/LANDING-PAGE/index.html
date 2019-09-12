@@ -15,9 +15,12 @@
             </nav>
     </header>
 
-  <div class="logo-container">
-    <img class="logo" src="images/PEN-NY.png" alt="logo">
-  </div>
+    <div
+    class="logo-container">
+      <img class="logo"
+      src="images/PEN-NY.png"
+      alt="logo">
+    </div>
 
         <div id=buttonContainer>
           <button
@@ -47,26 +50,39 @@
                 class ="close"
                 title="close window">
                 &times;</span>
+            </div>
 
             <div class="container">
 
-                    <label for="email"><b>EMAIL</b></label>
+                    <label for="email">
+                      <b>EMAIL</b>
+                        </label>
+
                     <input
                     type="text"
                     value="EMAIL ADDRESS"
-                    class="email" required>
+                    class="email"
+                    required>
 
-                    <label for ="pw"><b>PASSWORD</b></label>
+                    <label for="pw">
+                      <b>PASSWORD</b>
+                        </label>
+
                     <input
                     type="password"
                     value="Enter Password"
-                    class="pw" required>
+                    class="pw"
+                    required>
 
-                    <label for="username"><b>USERNAME</b></label>
+                    <label for="username">
+                      <b>USERNAME</b>
+                        </label>
+
                     <input
                     type="text"
                     value="ENTER USERNAME"
-                    class="username" required>
+                    class="username"
+                    required>
 
                     <button
                     type="submit"
@@ -79,10 +95,9 @@
                     <button type="button" onclick="document.getElementById('idWindow').style.display='none'"
                     class="cancel">
                     CANCEL</button>
-
             </form>
-
         </div>
+
         <script>
           function navigateToProfilePage() {
             location.replace("../PROFILE-PAGE/index.html")

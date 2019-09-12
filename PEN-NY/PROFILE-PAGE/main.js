@@ -1,12 +1,12 @@
 
  // "http://thesi.generalassemb.ly:8080/user/comment",
-
- // const modalLP = document.getElementById('updateWindow');
- // modalLP.onclick = function(event) {
- //     if (event.target == modalLP) {
- //         modalLP.style.display = "none";
- //     }
- // };
+//updateprofile window animate//
+ const modal = document.querySelector("window");
+ modal.onclick = function(event) {
+     if (event.target == modal) {
+         modal.style.display = "none";
+     }
+ };
 
 
 function postData(event) {
@@ -37,8 +37,6 @@ function postData(event) {
         console.log(err);
     })
 }
-
-
 
 function createPost(event) {
     event.preventDefault();
@@ -122,20 +120,37 @@ function updateDom() {
       //   //attempt to splice the array^
       // }
 //     })
-    // .catch((err) => {
-    //     console.log(err);
-    // })
-
+  .catch((err) => {
+    console.log(err);
+  })
 }
-//starting the get profile function
-// fetch("http://thesi.generalassemb.ly:8080/profile", {
+
+// starting the create profile function
+// function createProfile();
+//   event.preventDefault();
+//   const email = document.querySelector('.additionalEmail');
+//   const password = document.querySelector('.mobile');
+//   const username = document.querySelector('.address');
+//
+//   fetch("http://thesi.generalassemb.ly:8080/profile", {
 //         method: 'POST',
 //         headers: {
 //             "Content-Type": "application/json"
 //             "Authorization": "Bearer" + localStorage.getItem('user')
 //         },
 //         body: JSON.stringify({
-//             email: email.value,
-//             password: password.value,
-//             username: username.value
+//             additionalEmail: email.value,
+//             mobile: mobile.value,
+//             address: address.value
 //         })
+//       })
+//   .then((res) => {
+//     return res.json();
+//   })
+//   .then((res) => {
+//     localStorage.setItem('user', res.token);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   })
+// }
