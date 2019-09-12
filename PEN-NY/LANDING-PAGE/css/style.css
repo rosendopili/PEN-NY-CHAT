@@ -31,7 +31,7 @@ header {
 
 nav {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   justify-content: center;
   font-family: arial, sans-serif;
   width: 100%;
@@ -56,6 +56,7 @@ input[type=text], input[type=password] {
   display: inline-block;
   border: 1px solid #393985;
   box-sizing: border-box;
+  border: none;
 }
 
 button {
@@ -119,7 +120,7 @@ span.psw {
 }
 
 .window-content {
-  background-image: radial-gradient(white, #E4F2EB, #C7EDDB, #7DDBAF, #94D1B5,  #5DF5AE, #23FA96);
+  background-image: radial-gradient(white, #DAF5E8, #C2F0DA, #A5F0CD, #8DF2C3, #8DF2C3);
   margin: 5% auto 15% auto;
   border:  none;
   width: 80%;

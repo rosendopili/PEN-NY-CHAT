@@ -1,12 +1,12 @@
 
  // "http://thesi.generalassemb.ly:8080/user/comment",
 
- const modalLP = document.getElementById('updateWindow');
- modalLP.onclick = function(event) {
-     if (event.target == modalLP) {
-         modalLP.style.display = "none";
-     }
- };
+ // const modalLP = document.getElementById('updateWindow');
+ // modalLP.onclick = function(event) {
+ //     if (event.target == modalLP) {
+ //         modalLP.style.display = "none";
+ //     }
+ // };
 
 
 function postData(event) {
@@ -78,21 +78,23 @@ function updateDom() {
         return res.json();
     })
     .then((res) => {
-        const list = document.querySelector('.posts');
+          const list = document.querySelector('.posts');
           for (let i = 0; i < res.length; i++) {
 
             const item = document.createElement('li');
             const title = document.createElement('h3');
             const description = document.createElement('p');
-            // const buttonDelete = document.createElement('button');
+            const buttonDelete = document.createElement('input');
             item.appendChild(title);
             item.appendChild(description);
-            // buttonDelete.appendChild(item);
+            buttonDelete.appendChild(item);
             title.innerText = res[i].title;
             description.innerText = res[i].description;
             list.appendChild(item);
-            // list.appendChild(buttonDelete);
-            //delete button not functioning.
+            list.appendChild(buttonDelete);
+            buttonDelete.setAttribute("class", "delete");
+            buttonDelete.setAttribute("type", "submit");
+            buttonDelete.setAttribute("value", "delete");
           }
         })
             //

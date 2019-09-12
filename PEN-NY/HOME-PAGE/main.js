@@ -41,15 +41,17 @@ function updateDom() {
             const item = document.createElement('li');
             const title = document.createElement('h3');
             const description = document.createElement('p');
-            // const buttonDelete = document.createElement('button');
+            const buttonDelete = document.createElement('input');
             item.appendChild(title);
             item.appendChild(description);
-            // buttonDelete.appendChild(item);
+            buttonDelete.appendChild(item);
             title.innerText = res[i].title;
             description.innerText = res[i].description;
             list.appendChild(item);
-            // list.appendChild(buttonDelete);
-            //delete button not functioning.
+            list.appendChild(buttonDelete);
+            buttonDelete.setAttribute("class", "delete");
+            buttonDelete.setAttribute("type", "submit");
+            buttonDelete.setAttribute("value", "delete");
           }
         })
             //
