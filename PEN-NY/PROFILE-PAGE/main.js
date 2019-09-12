@@ -84,24 +84,36 @@ function updateDom() {
             const item = document.createElement('li');
             const title = document.createElement('h3');
             const description = document.createElement('p');
+            const commentInput =
+            document.createElement('input');
             const buttonDelete = document.createElement('input');
+
+
             item.appendChild(title);
             item.appendChild(description);
+            //added comment button to the array//
+            commentInput.appendChild(item);
+            //added delete button to the array//
             buttonDelete.appendChild(item);
+
+
             title.innerText = res[i].title;
             description.innerText = res[i].description;
             list.appendChild(item);
+            list.appendChild(commentInput);
             list.appendChild(buttonDelete);
+
+
+            commentInput.setAttribute("class", "comment");
+            commentInput.setAttribute("type", "submit");
+            commentInput.setAttribute("value", "comment");
+
             buttonDelete.setAttribute("class", "delete");
             buttonDelete.setAttribute("type", "submit");
             buttonDelete.setAttribute("value", "delete");
           }
         })
-            //
-            // if (i > 0) {
-            //   title.innerText.pop(1);
-            //   description.innerText.pop(1);
-            // }
+
 
       //   let filtered = list.length.filter(function(value, index){
       //     return value > 0;
@@ -109,12 +121,10 @@ function updateDom() {
       //     list.length.splice(i, 1);
       //   //attempt to splice the array^
       // }
-
-
 //     })
-    .catch((err) => {
-        console.log(err);
-    })
+    // .catch((err) => {
+    //     console.log(err);
+    // })
 
 }
 //starting the get profile function

@@ -106,9 +106,7 @@ footer {
   box-shadow: 0px 10px 15px #393985;
 }
 p {
-  /* text-align: center;
-  margin-top: 100px;
-  margin-bottom: 10px; */
+  text-align: center;
   font-size: 25px;
   color: #ED5555;
 }
@@ -207,4 +205,20 @@ li {
 
 .delete:hover {
   opacity: 0.8;
+}
+
+.comment {
+ width: 30%;
+ align-self: center;
+ height: 20px;
+ background-color: #8A89F0;
+ color: white;
+ border: none;
+ border-radius: 10px;
+ text-transform: uppercase;
+ box-shadow: 0px 5px 10px #C8C7ED;
+}
+
+.comment:hover {
+ opacity: 0.8;
 }
