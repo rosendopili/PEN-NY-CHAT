@@ -300,6 +300,7 @@ li {
 /* issues with creating modal for profile update field */
 
 #updateProfile{
+font-family: 'Libre Baskerville', sans-serif;
 width: 100%;
 border: none;
 background-color: #F58994;
