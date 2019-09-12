@@ -1,7 +1,7 @@
 
  // "http://thesi.generalassemb.ly:8080/user/comment",
 //updateprofile window animate//
- const modal = document.querySelector("window");
+ const modal = document.getElementById("updateWindow");
  modal.onclick = function(event) {
      if (event.target == modal) {
          modal.style.display = "none";
@@ -135,8 +135,9 @@ function createProfile(event) {
   fetch("http://thesi.generalassemb.ly:8080/profile", {
         method: 'POST',
         headers: {
+            "Authorization": "Bearer" + localStorage.getItem('user'),
             "Content-Type": "application/json"
-            // "Authorization": "Bearer" + localStorage.getItem('user')
+
         },
         body: JSON.stringify({
             additionalEmail: additionalEmail.value,
