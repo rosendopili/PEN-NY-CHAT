@@ -157,19 +157,19 @@ function listAllPosts(event) {
 
 listAllPosts();
 
-//attempt to reverse order of posts list
-//post disappeared on attempt
-function reverseList() {
-     for (let i = 0, j = posts.length; i < posts.length; i++) {
-         posts.splice(i, 0, posts[j-1]);
-            console.log('index:', i)
-            console.log('copy:', posts.join(','))
-            posts.splice(j, 1);
-            console.log('trim', posts.join(','))
- }
-}
-
-reverseList();
+//second attempt to reverse order of posts list
+//did not affect post list at all
+// function reverseList() {
+//      for (let i = 0, j = posts.length; i < posts.length; i++) {
+//          posts.splice(i, 0, posts[j-1]);
+//             console.log('index:', i)
+//             console.log('copy:', posts.join(','))
+//             posts.splice(j, 1);
+//             console.log('trim', posts.join(','))
+//  }
+// }
+//
+// reverseList();
 
 
 // function limitPosts() {
