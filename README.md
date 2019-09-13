@@ -63,7 +63,7 @@ Using the provided API, we were able to implement user log in, sign up, user pos
 
     The landing page first featured a built in log-in and sign-up field.  We decided to use the landing-page as an entry way into the profile-page, which houses more of the site's main features.
 
-    Our timeline became less organized as we "discovered" the ability to implemenet certain functionalities through the API.
+    Our timeline became less organized as we "discovered" the ability to implement certain functionalities through the API.
 
     This forced us to pivot continuously between embedding API fetch calls within functions & call-backs to our HTML, and re-designing the site to house the API functionality.  Our use of modals is the main example of these pivots.  Instead of using up more real-estate on each page or adding additional page, we decided it was best to use pop-up windows to gather more user information.
 
