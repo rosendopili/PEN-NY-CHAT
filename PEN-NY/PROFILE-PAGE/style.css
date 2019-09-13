@@ -34,6 +34,7 @@ a {
   letter-spacing: 5px;
   line-height: 40px;
   color: #c15827;
+  font-style: bold;
 }
 
 .logoContainer {
@@ -162,8 +163,8 @@ footer {
   padding-top: 15px;
   padding-bottom: 20px;
   color: #c15827;
-  font-size: 25px
-  background-color: white;
+  font-size: 14px;
+  font-style: bold;
 }
 
 p {
@@ -365,18 +366,10 @@ span {
   to {transform: scale(1)}
 }
 
-
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-}
 .cancelbtn {
    width: 100%;
 }
-/*appended list items to comment button not functioning*/
+
 #commentInput, #commentContent {
   width: 100%;
   padding: 12px 20px;
