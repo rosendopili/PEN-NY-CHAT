@@ -170,7 +170,10 @@ listAllPosts();
 // }
 //
 // reversePost();
-
+// function reversePost() {
+//   const $ul = $("ul");
+//   const start = Math.floor()
+// }
 
 // function limitPosts() {
 //   const wallPost = document.querySelector(list.length);
