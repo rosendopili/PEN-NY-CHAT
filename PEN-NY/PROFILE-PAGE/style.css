@@ -185,6 +185,7 @@ p {
   height: 700px;
   width: 80%;
   overflow-y: scroll;
+  overflow-x: hidden;
   /* border: 3px solid #9EA3A0; */
   background-image: radial-gradient(#DAF0F0, #F2FAFA, #F0F7F7, white);
   border: none;

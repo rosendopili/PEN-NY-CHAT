@@ -64,10 +64,14 @@ function updateDom() {
             commentInput.setAttribute("class", "comment");
             commentInput.setAttribute("type", "submit");
             commentInput.setAttribute("value", "comment");
+            commentInput.setAttribute("onclick", "createComment(event)");
 
             buttonDelete.setAttribute("class", "delete");
             buttonDelete.setAttribute("type", "submit");
             buttonDelete.setAttribute("value", "delete");
+            buttonDelete.setAttribute("onclick", "deletePost(event)");
+
+            description.setAttribute("class", "wallPost");
           }
         })
             //
@@ -135,11 +139,14 @@ function listAllPosts(event) {
             commentInput.setAttribute("class", "comment");
             commentInput.setAttribute("type", "submit");
             commentInput.setAttribute("value", "comment");
+            commentInput.setAttribute("onclick", "createComment(event)");
 
             buttonDelete.setAttribute("class", "delete");
             buttonDelete.setAttribute("type", "submit");
             buttonDelete.setAttribute("value", "delete");
             buttonDelete.setAttribute("onclick", "deletePost(event)")
+
+            description.setAttribute("class", "wallPost");
           }
         })
 
