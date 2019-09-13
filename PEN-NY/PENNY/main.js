@@ -160,16 +160,16 @@ listAllPosts();
 //third attempt to reverse order of posts list
 //did not affect post list at all
 // function reversePost() {
-//      for (let i = 0, j = li.length; i < li.length; i++) {
-//          li.splice(i, 0, li[j-1]);
+//      for (let i = 0, j = li.length; i < allPosts.length; i++) {
+//          allPosts.splice(i, 0, li[j-1]);
 //             console.log('index:', i)
-//             console.log('copy:', li.join(','))
-//             li.splice(j, 1);
-//             console.log('trim', li.join(','))
+//             console.log('copy:', allPosts.join(','))
+//             allPosts.splice(j, 1);
+//             console.log('trim', allPosts.join(','))
 //  }
 // }
 //
-// reverseList();
+// reversePost();
 
 
 // function limitPosts() {
