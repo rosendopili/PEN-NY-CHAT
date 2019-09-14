@@ -1,6 +1,8 @@
 # PEN-NY-CHAT
 AEDA week 3 project
 
+TECHNOLOGIES USED: HTML, CSS, JavaScript, and General Assembly API.
+
 PEN-NY: an interactive website that focuses on peer to group communication.
 
 Using the provided API, we were able to implement user log in, sign up, user posts and group posts.

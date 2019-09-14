@@ -156,17 +156,23 @@ function listAllPosts(event) {
 
 listAllPosts();
 
-//attempt to reverse order of posts list
-//post disappeared on attempt
-// function reverseList(arr) {
-//      const newList = [];
-//      for (let i = arr.length - 1; i >= 0; i--) {
-//          newList.push(arr[i]);
-//      }
-//      return newList;
+//third attempt to reverse order of posts list
+//did not affect post list at all
+// function reversePost() {
+//      for (let i = 0, j = li.length; i < allPosts.length; i++) {
+//          allPosts.splice(i, 0, li[j-1]);
+//             console.log('index:', i)
+//             console.log('copy:', allPosts.join(','))
+//             allPosts.splice(j, 1);
+//             console.log('trim', allPosts.join(','))
 //  }
-
-
+// }
+//
+// reversePost();
+// function reversePost() {
+//   const $ul = $("ul");
+//   const start = Math.floor()
+// }
 
 // function limitPosts() {
 //   const wallPost = document.querySelector(list.length);
