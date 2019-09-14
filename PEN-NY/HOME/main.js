@@ -9,6 +9,8 @@ modal.onclick = function(event) {
 
 //log in functionality//
 function logIn(event) {
+  document.querySelector('.signupForm').style.display = "none";
+  
     event.preventDefault();
     const email = document.querySelector('.email');
     const password = document.querySelector('.pw');

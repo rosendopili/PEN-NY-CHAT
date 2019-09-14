@@ -84,7 +84,6 @@ function updateDom() {
       //     return value > 0;
       //   if (list.length[i] === 1) {
       //     list.length.splice(i, 1);
-      //   //attempt to splice the array^
       // }
 
 

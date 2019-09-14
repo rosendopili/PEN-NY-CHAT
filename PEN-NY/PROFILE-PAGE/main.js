@@ -33,6 +33,9 @@ function postData(event) {
         localStorage.setItem('user', res.token);
         createPost();
     })
+    .then((res)=>{
+        deletePost();
+    })
     .catch((err) => {
         console.log(err);
     })
@@ -95,7 +98,9 @@ function updateDom() {
 
             title.innerText = res[i].title;
             description.innerText = res[i].description;
+
             list.appendChild(item);
+
             list.appendChild(commentInput);
             list.appendChild(buttonDelete);
 
@@ -136,7 +141,7 @@ function createProfile(event) {
     fetch("http://thesi.generalassemb.ly:8080/profile", {
           method: 'POST',
           headers: {
-              "Authorization": "Bearer" + localStorage.getItem('user'),
+              "Authorization": "Bearer " + localStorage.getItem('user'),
               "Content-Type": "application/json"
 
         },
@@ -150,7 +155,7 @@ function createProfile(event) {
       return res.json();
     })
     .then((res) => {
-      localStorage.setItem('user', res.token);
+
     })
     .catch((err) => {
       console.log(err);
@@ -163,7 +168,7 @@ function deletePost(event) {
     event.preventDefault();
     document.querySelector(".delete");
 
-    fetch('http://thesi.generalassemb.ly:8080/post/1', {
+    fetch('http://thesi.generalassemb.ly:8080/post/', {
         method: "DELETE",
         headers: {
             "Authorization": "Bearer" +
@@ -229,3 +234,13 @@ function createComment(event) {
       })
 
 }
+
+
+// attempting to make sign up field disappear after click//
+// function fieldDisappear(event) {
+//       document.querySelector('.signupForm').style.display = "none";
+// }
+//
+// function disappearButton(event) {
+// document.querySelector('.profileSubmitButton').addEventListener('onclick', 'fieldDisappear(event)');
+// }
