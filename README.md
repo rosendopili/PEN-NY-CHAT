@@ -1,15 +1,17 @@
-# PEN-NY-CHAT
-AEDA week 3 project
-
-TECHNOLOGIES USED: HTML, CSS, JavaScript, and General Assembly API.
-
+## PEN-NY-CHAT
 PEN-NY: an interactive website that focuses on peer to group communication.
+
+## TECHNOLOGIES USED
+-HTML 
+-CSS 
+-JavaScript & 
+-General Assembly's third-party API.
+
+## FUNCTIONALITY
 
 Using the provided API, we were able to implement user log in, sign up, user posts and group posts.
 
-            FUNCTIONALITY
-
-        LANDING-PAGE
+**Landing Page**
 
     Upon entering the site, you will be greeted by a landing-page.
 
@@ -27,7 +29,7 @@ Using the provided API, we were able to implement user log in, sign up, user pos
 
     If the user does not have existing log-in credentials, she may hit the "enter" button and be directed to the profile-page.
 
-        PROFILE-PAGE
+**Profile Page**
 
     Upon redirect to the profile-page, the user will see input fields for "sign up".
 
@@ -43,7 +45,7 @@ Using the provided API, we were able to implement user log in, sign up, user pos
 
     This modal will prompt the user for an additional e-mail, a phone number and an address to effectively "update" their profile information (unfortunately, the API functionality of this request will return an error 401 due to some bearer authorization debugging that we are still in the process of implementing.
 
-        HOME PAGE
+**Home Page**
 
     To view group or public posts, the user can navigate to the "Penny" tab where they will be greeted with the same "posting fields" available in the profile page.  The main difference is that the content wall of the Penny page features both user and group posts.
 
@@ -53,11 +55,11 @@ Using the provided API, we were able to implement user log in, sign up, user pos
 
     Once again, these are unfortunately, still a work in progress.
 
-            GENERAL APPROACH
+## GENERAL APPROACH
 
-        TIMELINE:
+**Time Line** 
 
-    Our goal was to have general design outlined in CSS and HTML by Monday.
+    Our goal was to have general design outlined in CSS and HTML by day one.
 
     API functionality would then be implemented to the bare design ad hoc as the week progressed.
 
@@ -69,18 +71,18 @@ Using the provided API, we were able to implement user log in, sign up, user pos
 
     This forced us to pivot continuously between embedding API fetch calls within functions & call-backs to our HTML, and re-designing the site to house the API functionality.  Our use of modals is the main example of these pivots.  Instead of using up more real-estate on each page or adding additional page, we decided it was best to use pop-up windows to gather more user information.
 
-        THE UNSOLVED MYSTERIES OF THE API
+**THE UNSOLVED MYSTERIES OF THE API**
 
     While the fetch requests are present within our code, we were unable to fully implement the delete post, update profile and comment on post functions.
 
     I am still unclear on why the error 401 persists when these functions are invoked, but am convinced that there is a deficiency along the lines of our log-in and/or sign-up processes.
 
-        GITHUB NIGHTMARES
+**GITHUB NIGHTMARES**
 
     We actually rebooted our repo due to some persistent github issues early on.  (Another timeline issue).
 
     Once we made a new repository, the github issues generally subsided.
 
-        PLANNING DOCUMENTATION
+**PLANNING DOCUMENTATION**
 
-https://docs.google.com/presentation/d/1e5vG0iM1sKKpUTAdHejLI4O4lg-3y5W3rAz6ITr73r0/edit?usp=sharing
+Photos and diagrams of our work throughout the app building journey can be viewed [here](https://docs.google.com/presentation/d/1e5vG0iM1sKKpUTAdHejLI4O4lg-3y5W3rAz6ITr73r0/edit?usp=sharing).
