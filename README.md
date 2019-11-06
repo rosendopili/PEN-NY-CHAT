@@ -1,6 +1,13 @@
 ## PEN-NY-CHAT
 PEN-NY: an interactive website that focuses on peer to group communication.
 
+## Team Members 
+Rosendo Pili (<a href="https://github.com/rosendopili">@rosendopili</a>)<br/>
+Samantha Richards (<a href="https://github.com/srichards567">@srichards567</a>)<br/>
+
+## Cloning
+- Clone this repo `git@github.com:rosendopili/PEN-NY-CHAT.git`
+
 ## TECHNOLOGIES USED
 -HTML 
 -CSS 
