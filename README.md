@@ -9,10 +9,10 @@ Samantha Richards (<a href="https://github.com/srichards567">@srichards567</a>)<
 - Clone this repo `git@github.com:rosendopili/PEN-NY-CHAT.git`
 
 ## TECHNOLOGIES USED
--HTML 
--CSS 
--JavaScript & 
--General Assembly's third-party API.
+* HTML 
+* CSS 
+* JavaScript & 
+* General Assembly's third-party API.
 
 ## FUNCTIONALITY
 
